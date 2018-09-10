@@ -2,11 +2,11 @@ import numpy as np
 import librosa, math
 
 sample_rate = 22050
-n_fft = 2048
+n_fft = 1024
 fft_bins = n_fft // 2 + 1
 num_mels = 80
-hop_length = int(sample_rate * 0.0125) # 12.5ms
-win_length = int(sample_rate * 0.05)   # 50ms
+hop_length = 256 # 12.5ms
+win_length = 1024   # 50ms
 fmin = 40
 min_level_db = -100
 ref_level_db = 20
